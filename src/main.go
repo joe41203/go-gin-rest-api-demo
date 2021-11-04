@@ -1,6 +1,11 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"fmt"
+	"io/ioutil"
+
+	"github.com/gin-gonic/gin"
+)
 
 func Home(c *gin.Context) {
 	c.JSON(200, gin.H{
@@ -9,8 +14,13 @@ func Home(c *gin.Context) {
 }
 
 func Post(c *gin.Context) {
+	body := c.Request.Body
+	value, err := ioutil.ReadAll(body)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
 	c.JSON(200, gin.H{
-		"message": "Posted",
+		"message": string(value),
 	})
 }
 
