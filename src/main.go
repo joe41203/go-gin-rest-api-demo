@@ -8,10 +8,17 @@ func Home(c *gin.Context) {
 	})
 }
 
+func Post(c *gin.Context) {
+	c.JSON(200, gin.H{
+		"message": "Posted",
+	})
+}
+
 func main() {
 	server := gin.Default()
 
 	server.GET("/", Home)
+	server.POST("/post", Post)
 
 	server.Run()
 }
