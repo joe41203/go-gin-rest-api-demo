@@ -8,7 +8,7 @@ RUN go mod download
 RUN go build -o /api /app/src/main.go
 
 # main
-FROM alpine
+FROM alpine:3.11.12
 EXPOSE 8080
 COPY --from=builder /api .
 USER nobody
