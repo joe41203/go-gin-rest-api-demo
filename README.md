@@ -1,15 +1,15 @@
-# go-gin-rest-api
+# go-gin-rest-api-demo
 
 ## 初期設定
 ```
-$ git clone https://github.com/joe41203/go-gin-rest-api.git
-$ cd go-gin-rest-api
-$ docker build . -t go-gin-rest-api:latest
+$ git clone https://github.com/joe41203/go-gin-rest-api-demo.git
+$ cd go-gin-rest-api-demo
+$ docker build . -t go-gin-rest-api-demo:latest
 ```
 
 ## ginの起動
 ```
-$ docker run -p 8080:8080 go-gin-reset-api:latest
+$ docker run -p 8080:8080 go-gin-rest-api-demo:latest
 ```
 
 ## 動作確認
